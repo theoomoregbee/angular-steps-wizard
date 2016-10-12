@@ -1,3 +1,8 @@
 # angular-steps-wizard
 this helps to show user different steps when they fill a long process form, that has stages
- check example.html for demo
+
+# Demo
+check example.html for demo
+
+# Need Help
+ to make it more robust and work clearly
