@@ -22,8 +22,7 @@ angular.module("ngApp", ["steps"])
 <body ng-controller="MainCtrl">
  <activities active="3" on-finish="test()" on-state-change="change(index)" previous="true" next="false">
                     <activity title="label 1">activity 1</activity>
-                    <activity title="label 2" completed="true">
-                        <div data-ng-include="'../views/dashboard/header-nav.html'"></div>
+                    <activity title="label 2" completed="true"> 
                         activity 2</activity>
                     <activity title="label 3">activity 3</activity>
                     <activity title="label 4">activity 4</activity>
