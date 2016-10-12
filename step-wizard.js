@@ -97,7 +97,7 @@ var activities = function () {
                 console.log("attribute", $attrs.active, "Activities", $ctrl.activities);
                 $ctrl.selectActivity((Number($attrs.active)) || 0); //set which as active, minus 1 so we can use real number instead of index from the front-end
             },
-            templateUrl:"views/manage_admission/activities.html"
+            templateUrl:"steps.html"
             };
 };
 
