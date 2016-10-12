@@ -1,0 +1,33 @@
+<html ng-app="ngApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="step-wizard.js"></script>
+
+<script>
+angular.module("ngApp", ["steps"])
+.controller("MainCtrl", function($scope){
+  $scope.test = function () {
+      alert("Hurray Done");
+    };
+    $scope.change = function (index) {
+        console.log("Changed to : "+index);
+    };
+});
+</script>
+</head>
+
+<body ng-controller="MainCtrl">
+ <activities active="3" on-finish="test()" on-state-change="change(index)" previous="true" next="false">
+                    <activity title="label 1">activity 1</activity>
+                    <activity title="label 2" completed="true">
+                        <div data-ng-include="'../views/dashboard/header-nav.html'"></div>
+                        activity 2</activity>
+                    <activity title="label 3">activity 3</activity>
+                    <activity title="label 4">activity 4</activity>
+                </activities>
+    </body>
+
+</html>
